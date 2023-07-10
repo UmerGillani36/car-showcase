@@ -4,6 +4,7 @@ import CustomButton from "./CustomButton";
 import Image from "next/image";
 import { calculateCarRent } from "@/utils";
 import { useState } from "react";
+import CardDetails from "./CardDetails";
 
 
 interface CarCardProps{
@@ -64,6 +65,7 @@ const CarCard = ({car}:CarCardProps) => {
                 handleClick={()=> setIsOpen(true)}
                 />
             </div>
+            <CardDetails isOpen={isOpen} closeModal={()=>setIsOpen(false)} car={car}/>
         </div>
     </div>
   )
